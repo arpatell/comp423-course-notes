@@ -12,7 +12,7 @@ This is a guide for setting up a basic Go project. You will setup a Go project w
 
 ## Prerequisites
 
-Before diving in, ensure you have the following installed:
+Before starting, ensure you have the following installed:
 
 - [Git](https://git-scm.com/)
 - [Docker](https://www.docker.com/)
@@ -56,12 +56,31 @@ Before diving in, ensure you have the following installed:
 
         {
           "name": "Go Dev Container",
-          "image": "golang:1.20",
-          "features": {},
-          "mounts": ["source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"]
+          "image": "mcr.microsoft.com/vscode/devcontainers/base:ubuntu",
+          "features": {
+            "ghcr.io/devcontainers/features/go": {}
+          },
+          "customizations": {
+            "vscode": {
+              "extensions": [
+                "golang.go"
+              ]
+            }
+          },
+          "mounts": [
+            "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
+          ]
         }
 
 3. Open your project in VS Code and reopen it in the container by clicking **Reopen in Container**.
+
+4. Verify that Go is installed in the container by running:
+
+        go version
+
+    You should see output similar to:
+
+        go version go1.20.14 linux/amd64
 
 ---
 
@@ -110,6 +129,12 @@ Before diving in, ensure you have the following installed:
     You should see this output:
 
         Hello, World!
+
+3. You can also run the following to combine the two previous steps:
+
+        go run main.go
+
+      > Note: The `go build` command compiles the source code into an executable binary, which can be run without requiring Go runtime. In contrast, `go run` compiles and executes the code in a single step without creating a binary file. `go build` is similar to `gcc` in the sense that they both compile source code into an executable.
 
 ---
 
