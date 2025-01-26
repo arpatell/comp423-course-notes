@@ -1,3 +1,3 @@
 # Welcome to Aaron's Course Notes
 
-This is my home page. I will use it to organize and share my course notes.
+This is my course notes page. Please explore some pages using the tabs or search above.

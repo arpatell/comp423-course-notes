@@ -1,3 +1,18 @@
 site_name: COMP423 Course Notes
 theme:
   name: material
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - search.highlight
+    - toc.integrate
+
+nav:
+  - Home: index.md
+  - Tutorials:
+      - Setting up a dev container for Go: tutorials/go-setup.md
+      
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/arpatell
