@@ -74,7 +74,9 @@ Before starting, ensure you have the following installed:
 
 3. Open your project in VS Code and reopen it in the container by clicking **Reopen in Container**.
 
-4. Verify that Go is installed in the container by running:
+4. Verify that the [Go VS Code Extension](https://marketplace.visualstudio.com/items?itemName=golang.go) has downloaded by checking the extensions tab (the dev container setup should have done it, but sometimes it doesn't carry over).
+
+5. Verify that Go is installed in the container by running:
 
         go version
 
